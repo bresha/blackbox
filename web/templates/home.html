@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}BlackBox Home{% endblock %}
+
+{% block main %}
+<div class="container, container-image">
+    <img src="{{ url_for('static', filename='home-page-unsplash.jpg') }}" alt="Home page" class="mw-100" />
+    <p class="text-over-image">
+        Our team is working hard on your ML solution
+    </p>
+    <p>Photo by <a
+            href="https://unsplash.com/@homajob?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Scott
+            Graham</a> on <a
+            href="https://unsplash.com/s/photos/machine-learning?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+    </p>
+</div>
+
+{% endblock %}

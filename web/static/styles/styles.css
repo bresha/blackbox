@@ -1,0 +1,13 @@
+
+.container-image {
+    position: relative;
+    text-align: center;
+  }
+
+.text-over-image {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 36px;
+    color: #fff;
+}
