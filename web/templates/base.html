@@ -13,12 +13,11 @@
 
 <body>
 
-    {% include "header.html" %}
     <div class="container-xl">
         {% block main %}
         {% endblock %}
     </div>
-    {% include "footer.html" %}
+    
     <div id="rasa-chat-widget" data-websocket-url="http://localhost:5005/socket.io"></div>
     <script src="https://unpkg.com/@rasahq/rasa-chat" type="application/javascript"></script>
 
