@@ -13,7 +13,7 @@
                 <p class="mb-6 lead text-secondary">We offer complete
                     solution.</p>
                 <div class="text-center text-md-start mt-4"><a class="btn btn-warning me-3 btn-lg"
-                        href="{{ url_for('web.contact') }}" role="button">Contact us</a></div>
+                        href="#contact" role="button">Contact us</a></div>
             </div>
             <div class="col-md-6 text-end"><img class="pt-7 pt-md-0 img-fluid"
                     src="{{ url_for('static', filename='images/home-page-unsplash.jpg') }}" alt="" /></div>
@@ -114,5 +114,64 @@
 
     </section>
 
+    <section class="pt-5" id="optimization">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h5 class="text-secondary">Optimize your business</h5>
+                    <h2 class="mb-2 fs-7 fw-bold">Optimization</h2>
+                    <p class="mb-4 fw-medium text-secondary">
+                        Your business can be optimized by using different algorithms for optimization.
+                    </p>
+                    <h4 class="fw-bold fs-5">Retail prices</h4>
+                    <p class="mb-4 fw-medium text-secondary">
+                        Your retail prices can be optimized to your customers.
+                    </p>
+                    <h4 class="fw-bold fs-5">Energy consumption</h4>
+                    <p class="mb-4 fw-medium text-secondary">
+                        You can save energy by using optimization algorithms and save money.
+                    </p>
+                    <h4 class="fw-bold fs-5">Custom optimization</h4>
+                    <p class="mb-4 fw-medium text-secondary">If you are looking for custom optimization let us know.</p>
+                </div>
+                <div class="col-lg-6"><img class="img-fluid"
+                        src="{{ url_for('static', filename='images/services/optimization.png') }}" alt="" /></div>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+<div class="container" id="contact">
+    <div class="row">
+        <div class="col-lg-6 d-flex align-items-center justify-content-center">
+            <h1 class="mb-4 fs-9 fw-bold text-center">Get in touch with us</h1>
+
+        </div>
+        <div class="col-lg-6">
+            <form method="post" action="send-inquiry">
+                <div class="mb-3">
+                    <label for="exampleInputName" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="exampleInputName">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPhone" class="form-label">Phone</label>
+                    <input type="text" class="form-control" id="exampleInputPhone">
+                </div>
+                <div id="promise" class="form-text mb-3">We'll never share your details with anyone else.</div>
+                <div>
+                    <label for="exampleInputInquiry" class="form-label">Inquiry</label>
+                    <textarea id="exampleInputInquiry" class="form-control mb-3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
 </div>
 {% endblock %}
