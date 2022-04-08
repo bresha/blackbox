@@ -1,5 +1,9 @@
 from flask import render_template, request, Blueprint
 import smtplib
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 
 bp = Blueprint('web', __name__)
@@ -19,11 +23,11 @@ def send_inquiry():
     body += "\n Inquiry"
     body += f"\n {inquiry}"
 
-    gmail_user = 'blackbox.leads.chatbot@gmail.com'
-    gmail_password = 'd5NEfd8fxNAKc2b'
+    gmail_user = os.getenv('GMAIL_USER')
+    gmail_password = os.getenv('GMAIL_PASSWORD')
 
     sent_from = gmail_user
-    to = ['hrvoje.bresic@gmail.com']
+    to = [os.getenv('SEND_MAIL_TO')]
     subject = "Webpage lead"
 
     email_text = """\
